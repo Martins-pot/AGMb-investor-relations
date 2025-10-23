@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Mortgage Bank - Premium Investor Portal</title>
+    <meta name="description" content="AG Mortgage Bank - 20+ years of excellence in Nigerian mortgage banking. Bb+ rated with ₦22.1B in assets.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --royal-blue: #002366;
+            --gold: #FFD700;
+            --dark-blue: #001a4d;
+            --light-blue: #0033cc;
+            --forest-green: #228B22;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            --gradient-blue: linear-gradient(135deg, #002366 0%, #001a4d 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ==================== NAVIGATION ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: transparent;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 35, 102, 0.98);
+            padding: 1rem 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--gold);
+            margin: 4px 0;
+            transition: 0.4s;
+            border-radius: 2px;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            margin-top: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 35, 102, 0.95) 0%, rgba(0, 26, 77, 0.98) 100%),
+                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover;
+            color: var(--white);
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Animated background particles */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        /* Floating elements in hero */
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.15);
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 0.7rem 2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            font-weight: 600;
+            animation: fadeInUp 1.2s ease;
+            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            animation: fadeInUp 1.4s ease;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.6s ease;
+        }
+
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--royal-blue);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        /* ==================== STATS SECTION ==================== */
+        .stats-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 5px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--royal-blue);
+            margin-bottom: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        /* ==================== SECTION TITLES ==================== */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            color: var(--royal-blue);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--gradient-gold);
+            border-radius: 3px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+
+        /* ==================== RATINGS SECTION ==================== */
+        .ratings-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(to bottom, var(--white) 0%, var(--light-gray) 100%);
+        }
+
+        .ratings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .rating-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rating-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .rating-card:hover::before {
+            opacity: 1;
+        }
+
+        .rating-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.15);
+        }
+
+        .rating-badge {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-blue);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0 auto 2rem;
+            border: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .rating-card h3 {
+            color: var(--royal-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+        }
+
+        .rating-info {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 15px;
+        }
+
+        .rating-info span {
+            display: block;
+            margin: 0.8rem 0;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .rating-card p {
+            color: var(--text-light);
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+
+        /* ==================== DOWNLOAD BUTTONS ==================== */
+        .btn-download {
+            background: var(--gradient-blue);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 35, 102, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 215, 0, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .btn-download:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 35, 102, 0.3);
+        }
+
+        .btn-download i {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ==================== FINANCIAL SECTION ==================== */
+        .financial-section {
+            padding: 6rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .financial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 5px solid var(--gold);
+        }
+
+        .financial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.12);
+        }
+
+        .financial-card h4 {
+            color: var(--royal-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .financial-highlight {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1rem 0;
+        }
+
+        .growth-indicator {
+            color: var(--forest-green);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        /* ==================== VISION SECTION ==================== */
+        .vision-section {
+            padding: 6rem 2rem;
+            background: var(--gradient-blue);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,215,0,0.05)" stroke-width="2"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .vision-section .section-title h2 {
+            color: var(--gold);
+        }
+
+        .vision-section .section-title h2::after {
+            background: var(--white);
+        }
+
+        .vision-section .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .big-bets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bet-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .bet-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .bet-number {
+            font-size: 3.5rem;
+            color: var(--gold);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .bet-card h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .bet-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .bet-card li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .bet-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* ==================== PRODUCTS SECTION ==================== */
+        .products-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            background: var(--white);
+        }
+
+        .product-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 10px rgba(0, 35, 102, 0.2));
+        }
+
+        .product-card h4 {
+            color: var(--royal-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .product-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .product-features li::before {
+            content: '→';
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .featured-product {
+            border: 3px solid var(--gold);
+            background: linear-gradient(135deg, rgba(0, 35, 102, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
+            position: relative;
+        }
+
+        .featured-product::after {
+            content: 'FEATURED';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gradient-gold);
+            color: var(--royal-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* ==================== ESG SECTION ==================== */
+        .esg-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--forest-green) 0%, #1a6b1a 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .esg-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+        }
+
+        .esg-section .section-title h2 {
+            color: var(--white);
+        }
+
+        .esg-section .section-title h2::after {
+            background: var(--gold);
+        }
+
+        .esg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .esg-card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .esg-card:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .esg-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 20px rgba(255, 215, 0, 0.3));
+        }
+
+        .esg-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .esg-card p {
+            line-height: 1.8;
+        }
+
+        /* ==================== DOCUMENTS SECTION ==================== */
+        .documents-section {
+            padding: 6rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .document-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 5px solid var(--royal-blue);
+        }
+
+        .document-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.15);
+            border-top-color: var(--gold);
+        }
+
+        .doc-icon {
+            font-size: 3.5rem;
+            color: var(--royal-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .document-card h4 {
+            color: var(--royal-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .document-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Download All Button */
+        .download-all-container {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .btn-download-all {
+            background: var(--gradient-gold);
+            color: var(--royal-blue);
+            padding: 1.3rem 3.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-download-all:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Google Drive Button */
+        .btn-google-drive {
+            background: var(--gradient-blue);
+            color: var(--white);
+            padding: 1.3rem 3.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 50px rgba(0, 35, 102, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-google-drive:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.6);
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        .contact-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--light-gray);
+            padding: 3.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-item {
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+
+        .contact-item i {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-top: 0.3rem;
+            filter: drop-shadow(0 2px 10px rgba(255, 215, 0, 0.3));
+        }
+
+        .contact-item h4 {
+            color: var(--royal-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 3.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--royal-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-family: 'Lato', sans-serif;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 4rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--royal-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--royal-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* ==================== SCROLL TO TOP BUTTON ==================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-gold);
+            color: var(--royal-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            z-index: 999;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        @media (max-width: 1024px) {
+            .nav-container {
+                padding: 0 2rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(0, 35, 102, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.4s;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                padding: 2rem 0;
+                gap: 1.5rem;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 4rem;
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid,
+            .ratings-grid,
+            .financial-grid,
+            .big-bets-grid,
+            .products-grid,
+            .esg-grid,
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .download-all-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .financial-highlight {
+                font-size: 2rem;
+            }
+
+            .bet-number {
+                font-size: 3rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AG MORTGAGE BANK</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#ratings">Ratings</a></li>
+                <li><a href="#financial">Performance</a></li>
+                <li><a href="#vision">Vision 2030</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="hero-content">
+            <div class="hero-badge">CBN-LICENSED SINCE 2005</div>
+            <h1>AG Mortgage Bank</h1>
+            <p class="tagline">Your Trusted Partner in Home Ownership</p>
+            <p class="subtitle">Building Nigeria's Future Through Affordable Housing Finance<br>20+ Years of Excellence | Bb+ Rating | ₦22.1B in Assets</p>
+            <div class="cta-buttons">
+                <a href="#documents" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download Investor Reports
+                </a>
+                <a href="#products" class="btn btn-secondary">
+                    <i class="fas fa-chart-line"></i>
+                    Explore Our Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="stats-section" id="about">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="22.1">0</div>
+                    <div class="stat-label">Total Assets (₦ Billions)</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Years Industry Experience</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">Bb+</div>
+                    <div class="stat-label">Agusto & Co. Rating</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number" data-count="28">0</div>
+                    <div class="stat-label">Capital Adequacy Ratio (%)</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-number">Top 10</div>
+                    <div class="stat-label">PMB in Nigeria</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Branch Locations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section style="padding: 6rem 2rem; background: white;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>About AG Mortgage Bank</h2>
+                <p>AG Mortgage Bank Plc was founded in 2004 with the Assemblies of God Nigeria as the core investor (51.9% shareholding). Our objective is to support low and medium income families to own affordable and livable homes through the provision of unique mortgage services. Operating as a CBN-Licensed National Mortgage Bank since January 2005, we have established ourselves as a trusted partner in Nigeria's housing finance sector.</p>
+            </div>
+            <div class="financial-grid" style="margin-top: 3rem;">
+                <div class="financial-card" data-aos="fade-right" data-aos-delay="100">
+                    <h4>Our Mission</h4>
+                    <p>To provide accessible and affordable mortgage financing solutions that empower Nigerians to achieve home ownership while maintaining the highest standards of service excellence and ethical business practices.</p>
+                </div>
+                <div class="financial-card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Our Vision</h4>
+                    <p>To become Nigeria's No. 1 Housing Finance Group by 2030, recognized for innovation, sustainability, and positive social impact in the Nigerian housing sector.</p>
+                </div>
+                <div class="financial-card" data-aos="fade-left" data-aos-delay="300">
+                    <h4>Core Values</h4>
+                    <p>Faith-based business principles, integrity, customer-centricity, innovation, sustainability, and commitment to empowering Nigerian families through affordable housing finance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credit Ratings Section -->
+    <section class="ratings-section" id="ratings">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Independent Credit Ratings</h2>
+                <p>Our financial strength and stability are validated by leading independent rating agencies</p>
+            </div>
+            <div class="ratings-grid">
+                <div class="rating-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="rating-badge">Bb+</div>
+                    <h3>Agusto & Co.</h3>
+                    <div class="rating-info">
+                        <span><strong>Rating:</strong> Bb+ (Upgraded from Bb)</span>
+                        <span><strong>Outlook:</strong> Stable</span>
+                        <span><strong>Date:</strong> October 2024</span>
+                    </div>
+                    <p>Agusto & Co. upgraded AGMB's rating to Bb+ with a Stable outlook, reflecting improved funding from stronger partnerships and a solid position in Nigeria's mortgage banking industry after 20+ years.</p>
+                    <a href="pdf/Agusto-Rating-Report-2024.pdf" class="btn-download" download="Agusto-Rating-Report-2024.pdf">
+                        <i class="fas fa-download"></i> Download Full Report
+                    </a>
+                </div>
+                <div class="rating-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="rating-badge">BB+</div>
+                    <h3>Global Credit Rating (GCR)</h3>
+                    <div class="rating-info">
+                        <span><strong>Long Term:</strong> BB+(NG)</span>
+                        <span><strong>Short Term:</strong> B(NG)</span>
+                        <span><strong>Outlook:</strong> Stable</span>
+                        <span><strong>Date:</strong> October 2024</span>
+                    </div>
+                    <p>GCR affirmed AGMB's BB+(NG) rating with a Stable outlook, balancing strong capitalisation metrics, stable funding structure, and adequate liquidity.</p>
+                    <a href="pdf/GCR-Rating-Report-2024.pdf" class="btn-download" download="GCR-Rating-Report-2024.pdf">
+                        <i class="fas fa-download"></i> Download Full Report
+                    </a>
+                </div>
+                <div class="rating-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="rating-badge">BBB</div>
+                    <h3>DataPro Rating</h3>
+                    <div class="rating-info">
+                        <span><strong>Rating:</strong> BBB</span>
+                        <span><strong>Agency:</strong> DataPro Rating Agencies</span>
+                    </div>
+                    <p>AGMB holds a BBB rating from DataPro, indicating satisfactory financial condition and adequate capacity to meet obligations. This rating complements the assessments from Agusto & Co. and GCR.</p>
+                    <a href="pdf/DataPro-Rating-Report-2024.pdf" class="btn-download" download="DataPro-Rating-Report-2024.pdf">
+                        <i class="fas fa-download"></i> Download Full Report
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Performance Section -->
+    <section class="financial-section" id="financial">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Strong Financial Performance</h2>
+                <p>Consistent growth and improving profitability demonstrate our financial strength</p>
+            </div>
+            <div class="financial-grid">
+                <div class="financial-card" data-aos="flip-left" data-aos-delay="100">
+                    <h4>Total Assets</h4>
+                    <div class="financial-highlight">₦22.1B</div>
+                    <div class="growth-indicator">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>21.4% Growth (2023)</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light);">2021: ₦19.4B → 2022: ₦18.2B → 2023: ₦22.1B</p>
+                </div>
+                <div class="financial-card" data-aos="flip-left" data-aos-delay="200">
+                    <h4>Gross Loan Portfolio</h4>
+                    <div class="financial-highlight">₦15.4B</div>
+                    <div class="growth-indicator">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>18.5% Growth (2023)</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light);">69.7% of total assets</p>
+                </div>
+                <div class="financial-card" data-aos="flip-left" data-aos-delay="300">
+                    <h4>Profit Before Tax</h4>
+                    <div class="financial-highlight">₦703M</div>
+                    <div class="growth-indicator">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>85.5% Growth (2023)</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light);">2021: ₦281M → 2022: ₦379M → 2023: ₦703M</p>
+                </div>
+                <div class="financial-card" data-aos="flip-left" data-aos-delay="400">
+                    <h4>Return on Equity (Pre-tax)</h4>
+                    <div class="financial-highlight">12.9%</div>
+                    <div class="growth-indicator">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Improved from 6.4% (2022)</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light);">Strong profitability metrics</p>
+                </div>
+                <div class="financial-card" data-aos="flip-left" data-aos-delay="500">
+                    <h4>Capital Adequacy Ratio</h4>
+                    <div class="financial-highlight">28%</div>
+                    <div class="growth-indicator">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Well above 10% minimum</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light);">Strong capitalisation</p>
+                </div>
+                <div class="financial-card" data-aos="flip-left" data-aos-delay="600">
+                    <h4>Liquidity Ratio</h4>
+                    <div class="financial-highlight">47.1%</div>
+                    <div class="growth-indicator">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Above 20% regulatory minimum</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-light);">Excellent liquidity position</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+                <a href="pdf/Financial-Summary-2021-2023.pdf" class="btn-download" download="Financial-Summary-2021-2023.pdf">
+                    <i class="fas fa-file-excel"></i> Download Financial Summary
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision 2030 Section -->
+    <section class="vision-section" id="vision">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Vision 2030: Nigeria's No. 1 Housing Finance Group</h2>
+                <p>Our ambitious transformation plan positions us for exponential growth and market leadership</p>
+            </div>
+            <div class="big-bets-grid">
+                <div class="bet-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bet-number">1</div>
+                    <h4>Group Structure Transformation</h4>
+                    <p>Diversify into a comprehensive housing finance group</p>
+                    <ul>
+                        <li>Mortgage Finance</li>
+                        <li>Housing Microfinance</li>
+                        <li>Housing Development</li>
+                        <li>Insurance & Brokerage</li>
+                        <li>Rental Housing Services</li>
+                    </ul>
+                </div>
+                <div class="bet-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bet-number">2</div>
+                    <h4>Raise ₦20 Billion Capital</h4>
+                    <p>Massive capital injection to fuel growth</p>
+                    <ul>
+                        <li>Equity: ₦10 Billion</li>
+                        <li>Debt: ₦10 Billion</li>
+                        <li>Timeline: Q2-Q4 2025</li>
+                        <li>Initial: ₦2B equity + ₦5B debt</li>
+                    </ul>
+                </div>
+                <div class="bet-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bet-number">3</div>
+                    <h4>Drive Business Growth</h4>
+                    <p>Aggressive expansion targets by 2030</p>
+                    <ul>
+                        <li>1 Million Customers</li>
+                        <li>300,000 Mortgages</li>
+                        <li>₦35.4B Loan Portfolio</li>
+                        <li>₦14.5B Gross Earnings</li>
+                        <li>₦3.15B Profit Before Tax</li>
+                    </ul>
+                </div>
+                <div class="bet-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bet-number">4</div>
+                    <h4>Lead Green Sustainable Housing</h4>
+                    <p>Pioneer in eco-friendly housing finance</p>
+                    <ul>
+                        <li>Green Housing Certification</li>
+                        <li>40% IFC EDGE certified homes</li>
+                        <li>Full ESG capability team</li>
+                        <li>Partner training programs</li>
+                    </ul>
+                </div>
+                <div class="bet-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bet-number">5</div>
+                    <h4>Increase Shareholder Value</h4>
+                    <p>Deliver exceptional returns to investors</p>
+                    <ul>
+                        <li>20% Return on Equity</li>
+                        <li>20% Earnings per Share</li>
+                        <li>20%-25% Dividend Payout</li>
+                        <li>Sustainable growth</li>
+                    </ul>
+                </div>
+                <div class="bet-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bet-number">6</div>
+                    <h4>Recruit Value Chain Partners</h4>
+                    <p>Build strategic ecosystem</p>
+                    <ul>
+                        <li>Technology Partners</li>
+                        <li>Development Finance Institutions</li>
+                        <li>Agency Loan Providers</li>
+                        <li>Realtors & Developers</li>
+                        <li>Financial Advisers</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
+                <a href="pdf/Transformation-Plan-2025-2030.pdf" class="btn btn-primary" download="Transformation-Plan-2025-2030.pdf">
+                    <i class="fas fa-download"></i> Download Transformation Plan
+                </a>
+                <a href="pdf/Strategic-Plan-2025-2030.pdf" class="btn btn-secondary" download="Strategic-Plan-2025-2030.pdf">
+                    <i class="fas fa-download"></i> Download Strategic Plan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Services Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Diverse Product Portfolio</h2>
+                <p>Tailored mortgage and financial solutions for every Nigerian homebuyer</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card featured-product" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-icon">🌍</div>
+                    <h4>Diaspora Home Ownership Scheme</h4>
+                    <p><strong>Featured Product:</strong> Specially designed for Nigerians abroad with over 17 million potential customers</p>
+                    <ul class="product-features">
+                        <li>Up to 70% financing (max ₦100M)</li>
+                        <li>Maximum 10-year tenor</li>
+                        <li>Remote property inspections</li>
+                        <li>Fast 30-day turnaround</li>
+                        <li>EDGE certified homes</li>
+                        <li>Digital application process</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-icon">🏠</div>
+                    <h4>Residential/Commercial Mortgages</h4>
+                    <p>Traditional mortgage financing for property acquisition</p>
+                    <ul class="product-features">
+                        <li>Up to 70% of property cost</li>
+                        <li>Maximum ₦100 million</li>
+                        <li>7-year maximum tenor</li>
+                        <li>Competitive interest rates</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-icon">🎯</div>
+                    <h4>LIMO (Leap Into Mortgage)</h4>
+                    <p>Perfect for first-time homebuyers with consistent savings</p>
+                    <ul class="product-features">
+                        <li>Requires 18 months savings</li>
+                        <li>Maximum 10-year tenor</li>
+                        <li>Up to ₦100 million</li>
+                        <li>Fast 30-day processing</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="product-icon">🔄</div>
+                    <h4>Rent-to-Own</h4>
+                    <p>Transition from tenant to homeowner seamlessly</p>
+                    <ul class="product-features">
+                        <li>Rent payments count toward ownership</li>
+                        <li>Flexible payment structure</li>
+                        <li>Path to home ownership</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="product-icon">🏗️</div>
+                    <h4>CONFIN (Construction Finance)</h4>
+                    <p>Financing for developers and construction companies</p>
+                    <ul class="product-features">
+                        <li>Support housing supply</li>
+                        <li>Tailored for developers</li>
+                        <li>Flexible terms</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="product-icon">💰</div>
+                    <h4>Asset-Backed Investment Note</h4>
+                    <p>Investment opportunities with attractive returns</p>
+                    <ul class="product-features">
+                        <li>Fund size up to ₦5 billion</li>
+                        <li>Average funds: ₦5 million</li>
+                        <li>Interest rate: Up to 20%</li>
+                        <li>12+ months tenor</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+                <a href="pdf/Products-Brochure-2025.pdf" class="btn-download" download="Products-Brochure-2025.pdf">
+                    <i class="fas fa-book"></i> Download Products Brochure
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESG Section -->
+    <section class="esg-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Committed to Sustainable Impact</h2>
+                <p>Integrating Environmental, Social, and Governance principles into every aspect of our business</p>
+            </div>
+            <div class="esg-grid">
+                <div class="esg-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="esg-icon">🌱</div>
+                    <h4>Environmental</h4>
+                    <p>Leading green housing finance with 40% IFC EDGE certified homes by 2030. Green Bond issuance planned for Q2 2025 to fund eco-friendly development projects.</p>
+                </div>
+                <div class="esg-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="esg-icon">👥</div>
+                    <h4>Social Impact</h4>
+                    <p>ES-TIW program empowering 500,000 women. Financial literacy programs reaching thousands. Focus on education, health, sports, and community development.</p>
+                </div>
+                <div class="esg-card" data-aos="flip-up" data-aos-delay="300">
+                    <div class="esg-icon">⚖️</div>
+                    <h4>Governance</h4>
+                    <p>12-member board with over 200 years collective experience. ISO 9001:2015 certified. Comprehensive board committees ensuring oversight and accountability.</p>
+                </div>
+                <div class="esg-card" data-aos="flip-up" data-aos-delay="400">
+                    <div class="esg-icon">🏆</div>
+                    <h4>Recognition</h4>
+                    <p>Best Mortgage Bank of the Year 2023 - Africa Housing Awards. Multiple certifications including ISO 9001:2015, NDPA compliance, and FMBN accreditation since 2008.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section" id="documents">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Investor Resources</h2>
+                <p>Comprehensive documentation for informed investment decisions</p>
+            </div>
+            <div class="documents-grid">
+                <!-- Credit Rating Reports -->
+                <div class="document-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Agusto & Co. Rating Report 2024</h4>
+                    <p>Comprehensive credit rating analysis with Bb+ rating and Stable outlook</p>
+                    <a href="pdf/Agusto-Rating-Report-2024.pdf" class="btn-download" download="Agusto-Rating-Report-2024.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>GCR Private Credit Report 2024</h4>
+                    <p>Global Credit Rating assessment with BB+(NG) rating</p>
+                    <a href="pdf/GCR-Rating-Report-2024.pdf" class="btn-download" download="GCR-Rating-Report-2024.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>DataPro Rating Report 2024</h4>
+                    <p>Independent rating validation with BBB rating</p>
+                    <a href="pdf/DataPro-Rating-Report-2024.pdf" class="btn-download" download="DataPro-Rating-Report-2024.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+
+                <!-- Financial Documents -->
+                <div class="document-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="doc-icon"><i class="fas fa-file-excel"></i></div>
+                    <h4>Financial Summary 2021-2023</h4>
+                    <p>3-year financial performance data with key metrics</p>
+                    <a href="pdf/Financial-Summary-2021-2023.pdf" class="btn-download" download="Financial-Summary-2021-2023.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Financial Model</h4>
+                    <p>Comprehensive financial projections and modeling</p>
+                    <a href="pdf/Financial-Model.pdf" class="btn-download" download="Financial-Model.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+
+                <!-- Strategic Planning -->
+                <div class="document-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Transformation Plan 2025-2030</h4>
+                    <p>SCALING UP: The 6 Big Bets for becoming Nigeria's No. 1 Housing Finance Group</p>
+                    <a href="pdf/Transformation-Plan-2025-2030.pdf" class="btn-download" download="Transformation-Plan-2025-2030.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Strategic Plan 2025-2030</h4>
+                    <p>MOVING FORWARD: Comprehensive strategy for market penetration and growth</p>
+                    <a href="pdf/Strategic-Plan-2025-2030.pdf" class="btn-download" download="Strategic-Plan-2025-2030.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+
+                <!-- Product Information -->
+                <div class="document-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Products Brochure 2025</h4>
+                    <p>Complete overview of all mortgage and financial products</p>
+                    <a href="pdf/Products-Brochure-2025.pdf" class="btn-download" download="Products-Brochure-2025.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Diaspora Home Ownership Scheme</h4>
+                    <p>Detailed information for Nigerian diaspora homebuyers</p>
+                    <a href="pdf/Diaspora-Home-Ownership-Scheme.pdf" class="btn-download" download="Diaspora-Home-Ownership-Scheme.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+
+                <!-- Corporate & ESG -->
+                <div class="document-card" data-aos="fade-up" data-aos-delay="550">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Sustainability Report 2023</h4>
+                    <p>ESG initiatives, green housing commitments, and social impact programs</p>
+                    <a href="pdf/Sustainability-Report-2023.pdf" class="btn-download" download="Sustainability-Report-2023.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Corporate Profile 2025</h4>
+                    <p>Company history, leadership, governance structure, and branch network</p>
+                    <a href="pdf/Corporate-Profile-2025.pdf" class="btn-download" download="Corporate-Profile-2025.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="document-card" data-aos="fade-up" data-aos-delay="650">
+                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Market Intelligence Report</h4>
+                    <p>Competitive positioning, market analysis, and growth opportunities</p>
+                    <a href="pdf/Market-Intelligence-Report.pdf" class="btn-download" download="Market-Intelligence-Report.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Download All Button and Google Drive Link -->
+            <div class="download-all-container" data-aos="zoom-in">
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-download-all" onclick="downloadAllDocuments()">
+                        <i class="fas fa-download"></i>
+                        Download All Documents (ZIP)
+                    </button>
+                    <a href="https://drive.google.com/drive/folders/1ypNGt89D_kiyp-RLIMvjNr4N3cJxJxFu" target="_blank" class="btn-google-drive">
+                        <i class="fab fa-google-drive"></i>
+                        View All Documents on Google Drive
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Partner With Us</h2>
+                <p>Get in touch with our Investor Relations team</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 style="color: var(--royal-blue); margin-bottom: 2rem;">Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Head Office</h4>
+                            <p>96 Opebi Road, Ikeja, Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>08155543000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@agmortgagebankplc.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h4>Other Locations</h4>
+                            <p>Surulere | Festac | Abuja | Enugu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <h3 style="color: var(--royal-blue); margin-bottom: 2rem;">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234 XXX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your investment interest..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AG Mortgage Bank Plc</h3>
+                <p>Building Nigeria's Future Through Affordable Housing Finance</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">CBN-Licensed National Mortgage Bank since 2005</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Us</a>
+                <a href="#ratings">Credit Ratings</a>
+                <a href="#financial">Financial Performance</a>
+                <a href="#vision">Vision 2030</a>
+                <a href="#products">Products & Services</a>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="#documents">Investor Documents</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">FAQs</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-section">
+                <h3>Certifications</h3>
+                <p>ISO 9001:2015 Certified</p>
+                <p>NDPA Compliant</p>
+                <p>FMBN Accredited</p>
+                <p>Best Mortgage Bank 2023</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AG Mortgage Bank Plc. All rights reserved. | RC: 123456 | CBN License No: XXX/XXX</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Designed for Investor Relations</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // ==================== INITIALIZE AOS ANIMATIONS ====================
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // ==================== MOBILE NAVIGATION TOGGLE ====================
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Animate hamburger icon
+            const spans = hamburger.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const spans = hamburger.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
+
+        // ==================== NAVBAR SCROLL EFFECT ====================
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrollTop = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+                scrollTop.classList.add('active');
+            } else {
+                navbar.classList.remove('scrolled');
+                scrollTop.classList.remove('active');
+            }
+        });
+
+        // ==================== SMOOTH SCROLL ====================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ==================== SCROLL TO TOP BUTTON ====================
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ==================== ANIMATED COUNTERS ====================
+        const animateCounter = (element, target) => {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toFixed(1);
+                    clearInterval(timer);
+                } else {
+                    element.textContent = current.toFixed(1);
+                }
+            }, 30);
+        };
+
+        // Trigger counters when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number[data-count]');
+                    statNumbers.forEach(stat => {
+                        const target = parseFloat(stat.dataset.count);
+                        animateCounter(stat, target);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // ==================== DOWNLOAD HANDLER ====================
+        function handleDownload(documentName) {
+            // Create a temporary notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                background: linear-gradient(135deg, #002366 0%, #001a4d 100%);
+                color: white;
+                padding: 1.5rem 2rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                z-index: 10000;
+                animation: slideIn 0.4s ease;
+                border-left: 5px solid #FFD700;
+            `;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: #FFD700; font-size: 1.5rem;"></i>
+                    <div>
+                        <strong>Download Started</strong><br>
+                        <span style="font-size: 0.9rem; opacity: 0.9;">${documentName}</span>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.4s ease';
+                setTimeout(() => notification.remove(), 400);
+            }, 3000);
+        }
+
+        // ==================== DOWNLOAD ALL DOCUMENTS ====================
+        function downloadAllDocuments() {
+            const documents = [
+                'pdf/Agusto-Rating-Report-2024.pdf',
+                'pdf/GCR-Rating-Report-2024.pdf',
+                'pdf/DataPro-Rating-Report-2024.pdf',
+                'pdf/Financial-Summary-2021-2023.pdf',
+                'pdf/Financial-Model.pdf',
+                'pdf/Transformation-Plan-2025-2030.pdf',
+                'pdf/Strategic-Plan-2025-2030.pdf',
+                'pdf/Products-Brochure-2025.pdf',
+                'pdf/Diaspora-Home-Ownership-Scheme.pdf',
+                'pdf/Sustainability-Report-2023.pdf',
+                'pdf/Corporate-Profile-2025.pdf',
+                'pdf/Market-Intelligence-Report.pdf'
+            ];
+            
+            // Create a more prominent notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, #002366 0%, #001a4d 100%);
+                color: white;
+                padding: 3rem;
+                border-radius: 25px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+                z-index: 10000;
+                text-align: center;
+                animation: zoomIn 0.4s ease;
+                border: 3px solid #FFD700;
+                min-width: 400px;
+            `;
+            notification.innerHTML = `
+                <i class="fas fa-download" style="color: #FFD700; font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 style="color: #FFD700; margin-bottom: 1rem;">Preparing Download Package</h3>
+                <p style="margin-bottom: 1.5rem; opacity: 0.9;">Creating ZIP file with ${documents.length} documents...</p>
+                <div style="background: rgba(255,215,0,0.2); height: 8px; border-radius: 10px; overflow: hidden;">
+                    <div id="progressBar" style="background: #FFD700; height: 100%; width: 0%; transition: width 0.3s ease;"></div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Simulate progress
+            let progress = 0;
+            const progressBar = notification.querySelector('#progressBar');
+            const interval = setInterval(() => {
+                progress += 8.33;
+                progressBar.style.width = progress + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    notification.innerHTML = `
+                        <i class="fas fa-check-circle" style="color: #FFD700; font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #FFD700; margin-bottom: 0.5rem;">Download Ready!</h3>
+                        <p style="opacity: 0.9;">All ${documents.length} documents packaged</p>
+                        <button onclick="window.location.href='pdf/AG-Mortgage-Bank-Documents.zip'" style="margin-top: 1.5rem; background: #FFD700; color: #002366; border: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; cursor: pointer;">
+                            <i class="fas fa-download"></i> Download ZIP File
+                        </button>
+                    `;
+                    
+                    setTimeout(() => {
+                        notification.style.animation = 'zoomOut 0.4s ease';
+                        setTimeout(() => notification.remove(), 400);
+                    }, 5000);
+                }
+            }, 200);
+        }
+
+        // ==================== FORM SUBMISSION ====================
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Create success notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
+                color: white;
+                padding: 1.5rem 2rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                z-index: 10000;
+                animation: slideIn 0.4s ease;
+                border-left: 5px solid #FFD700;
+            `;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: #FFD700; font-size: 1.5rem;"></i>
+                    <div>
+                        <strong>Message Sent Successfully!</strong><br>
+                        <span style="font-size: 0.9rem; opacity: 0.9;">We'll contact you shortly</span>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Reset form
+            e.target.reset();
+            
+            // Remove notification after 4 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.4s ease';
+                setTimeout(() => notification.remove(), 400);
+            }, 4000);
+        });
+
+        // ==================== ADD CSS ANIMATIONS ====================
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes zoomIn {
+                from {
+                    transform: translate(-50%, -50%) scale(0.8);
+                    opacity: 0;
+                }
+                to {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes zoomOut {
+                from {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+                to {
+                    transform: translate(-50%, -50%) scale(0.8);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ==================== LAZY LOADING OPTIMIZATION ====================
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
