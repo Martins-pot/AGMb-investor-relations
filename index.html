@@ -44,6 +44,7 @@
             line-height: 1.7;
             overflow-x: hidden;
             background: var(--white);
+            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -57,15 +58,15 @@
             top: 0;
             width: 100%;
             background: transparent;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             z-index: 1000;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .navbar.scrolled {
             background: rgba(0, 35, 102, 0.98);
-            padding: 1rem 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 0.8rem 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
         }
 
@@ -75,12 +76,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 3rem;
+            padding: 0 1.5rem;
         }
 
         .logo {
             color: var(--gold);
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 800;
             text-decoration: none;
             letter-spacing: 1px;
@@ -96,14 +97,14 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .nav-menu a {
             color: var(--white);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             position: relative;
             transition: all 0.3s ease;
             padding: 0.5rem 0;
@@ -151,7 +152,7 @@
             background: linear-gradient(135deg, rgba(0, 35, 102, 0.95) 0%, rgba(0, 26, 77, 0.98) 100%),
                         url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover;
             color: var(--white);
-            padding: 10rem 2rem 6rem;
+            padding: 8rem 1.5rem 4rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -184,24 +185,24 @@
         }
 
         .floating-element:nth-child(1) {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             top: 20%;
             left: 10%;
             animation-delay: 0s;
         }
 
         .floating-element:nth-child(2) {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             top: 60%;
             right: 15%;
             animation-delay: 2s;
         }
 
         .floating-element:nth-child(3) {
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             bottom: 20%;
             left: 20%;
             animation-delay: 4s;
@@ -224,27 +225,27 @@
             background: rgba(255, 215, 0, 0.15);
             border: 2px solid var(--gold);
             color: var(--gold);
-            padding: 0.7rem 2rem;
+            padding: 0.7rem 1.5rem;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 1px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             backdrop-filter: blur(10px);
             animation: fadeInUp 0.8s ease;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             animation: fadeInUp 1s ease;
             line-height: 1.2;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .hero .tagline {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
             color: var(--gold);
             font-weight: 600;
@@ -253,11 +254,11 @@
         }
 
         .hero .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
             animation: fadeInUp 1.4s ease;
-            line-height: 1.8;
+            line-height: 1.6;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -265,17 +266,17 @@
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1.6s ease;
         }
 
         .btn {
-            padding: 1.2rem 3rem;
+            padding: 1rem 2rem;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -306,30 +307,30 @@
         .btn-primary {
             background: var(--gradient-gold);
             color: var(--royal-blue);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+            box-shadow: 0 12px 35px rgba(255, 215, 0, 0.5);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--white);
             border: 2px solid var(--gold);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         .btn-secondary:hover {
             background: rgba(255, 215, 0, 0.1);
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 12px 35px rgba(255, 215, 0, 0.3);
         }
 
         /* ==================== STATS SECTION ==================== */
         .stats-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--white);
             position: relative;
         }
@@ -341,19 +342,19 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .stat-card {
             background: var(--white);
-            padding: 3rem 2rem;
-            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-top: 5px solid var(--gold);
+            border-top: 4px solid var(--gold);
             position: relative;
             overflow: hidden;
         }
@@ -364,7 +365,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 5px;
+            height: 4px;
             background: var(--gradient-gold);
             transform: scaleX(0);
             transition: transform 0.4s ease;
@@ -375,12 +376,12 @@
         }
 
         .stat-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 35, 102, 0.15);
         }
 
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: var(--royal-blue);
             margin-bottom: 0.8rem;
@@ -389,20 +390,20 @@
 
         .stat-label {
             color: var(--text-light);
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
 
         /* ==================== SECTION TITLES ==================== */
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .section-title h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: var(--royal-blue);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             position: relative;
             display: inline-block;
         }
@@ -410,44 +411,44 @@
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 5px;
+            width: 60px;
+            height: 4px;
             background: var(--gradient-gold);
             border-radius: 3px;
         }
 
         .section-title p {
             color: var(--text-light);
-            font-size: 1.15rem;
+            font-size: 1rem;
             max-width: 800px;
-            margin: 2rem auto 0;
-            line-height: 1.8;
+            margin: 1.5rem auto 0;
+            line-height: 1.6;
         }
 
         /* ==================== RATINGS SECTION ==================== */
         .ratings-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: linear-gradient(to bottom, var(--white) 0%, var(--light-gray) 100%);
         }
 
         .ratings-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .rating-card {
             background: var(--white);
-            padding: 3rem;
-            border-radius: 25px;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
             text-align: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
         }
@@ -470,70 +471,73 @@
 
         .rating-card:hover {
             border-color: var(--gold);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 35, 102, 0.15);
         }
 
         .rating-badge {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: var(--gradient-blue);
             color: var(--gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            margin: 0 auto 2rem;
-            border: 5px solid var(--gold);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--gold);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
             position: relative;
             z-index: 1;
         }
 
         .rating-card h3 {
             color: var(--royal-blue);
-            margin-bottom: 1.5rem;
-            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .rating-info {
-            margin: 1.5rem 0;
-            padding: 1.5rem;
+            margin: 1.2rem 0;
+            padding: 1.2rem;
             background: var(--light-gray);
-            border-radius: 15px;
+            border-radius: 12px;
         }
 
         .rating-info span {
             display: block;
-            margin: 0.8rem 0;
+            margin: 0.6rem 0;
             color: var(--text-dark);
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .rating-card p {
             color: var(--text-light);
-            margin: 2rem 0;
-            line-height: 1.8;
+            margin: 1.5rem 0;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* ==================== DOWNLOAD BUTTONS ==================== */
         .btn-download {
             background: var(--gradient-blue);
             color: var(--white);
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.8rem;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             font-weight: 600;
-            box-shadow: 0 10px 30px rgba(0, 35, 102, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 35, 102, 0.2);
             position: relative;
             overflow: hidden;
+            font-size: 0.9rem;
         }
 
         .btn-download::before {
@@ -550,13 +554,13 @@
         }
 
         .btn-download:hover::before {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
         }
 
         .btn-download:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 35, 102, 0.3);
+            box-shadow: 0 12px 35px rgba(0, 35, 102, 0.3);
         }
 
         .btn-download i {
@@ -566,45 +570,45 @@
 
         /* ==================== FINANCIAL SECTION ==================== */
         .financial-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--light-gray);
         }
 
         .financial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .financial-card {
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-left: 5px solid var(--gold);
+            border-left: 4px solid var(--gold);
         }
 
         .financial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 35, 102, 0.12);
         }
 
         .financial-card h4 {
             color: var(--royal-blue);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
         }
 
         .financial-highlight {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 800;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin: 1rem 0;
+            margin: 0.8rem 0;
         }
 
         .growth-indicator {
@@ -613,12 +617,13 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
         }
 
         /* ==================== VISION SECTION ==================== */
         .vision-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--gradient-blue);
             color: var(--white);
             position: relative;
@@ -650,53 +655,54 @@
 
         .big-bets-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
             position: relative;
             z-index: 1;
         }
 
         .bet-card {
             background: rgba(255, 255, 255, 0.08);
-            padding: 2.5rem;
-            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
             backdrop-filter: blur(20px);
             border: 2px solid rgba(255, 215, 0, 0.3);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
 
         .bet-card:hover {
             background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         .bet-number {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: var(--gold);
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
         }
 
         .bet-card h4 {
             color: var(--gold);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
         }
 
         .bet-card ul {
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
         }
 
         .bet-card li {
-            padding: 0.7rem 0;
-            padding-left: 2rem;
+            padding: 0.6rem 0;
+            padding-left: 1.5rem;
             position: relative;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 0.9rem;
         }
 
         .bet-card li::before {
@@ -705,78 +711,79 @@
             left: 0;
             color: var(--gold);
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         /* ==================== PRODUCTS SECTION ==================== */
         .products-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--white);
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .product-card {
             background: var(--light-gray);
-            padding: 3rem;
-            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-left: 5px solid var(--gold);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             background: var(--white);
         }
 
         .product-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
             filter: drop-shadow(0 4px 10px rgba(0, 35, 102, 0.2));
         }
 
         .product-card h4 {
             color: var(--royal-blue);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
         }
 
         .product-card p {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .product-features {
             list-style: none;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
         }
 
         .product-features li {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             color: var(--text-dark);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.6rem;
         }
 
         .product-features li::before {
             content: '→';
             color: var(--gold);
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .featured-product {
-            border: 3px solid var(--gold);
+            border: 2px solid var(--gold);
             background: linear-gradient(135deg, rgba(0, 35, 102, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
             position: relative;
         }
@@ -784,20 +791,20 @@
         .featured-product::after {
             content: 'FEATURED';
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background: var(--gradient-gold);
             color: var(--royal-blue);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            padding: 0.4rem 1.2rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 1px;
         }
 
         /* ==================== ESG SECTION ==================== */
         .esg-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: linear-gradient(135deg, var(--forest-green) 0%, #1a6b1a 100%);
             color: var(--white);
             position: relative;
@@ -824,17 +831,17 @@
 
         .esg-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
             position: relative;
             z-index: 1;
         }
 
         .esg-card {
             background: rgba(255, 255, 255, 0.12);
-            padding: 3rem 2rem;
-            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            border-radius: 15px;
             backdrop-filter: blur(20px);
             text-align: center;
             border: 2px solid rgba(255, 215, 0, 0.2);
@@ -843,38 +850,39 @@
 
         .esg-card:hover {
             background: rgba(255, 255, 255, 0.18);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         .esg-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
             filter: drop-shadow(0 4px 20px rgba(255, 215, 0, 0.3));
         }
 
         .esg-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
             color: var(--gold);
         }
 
         .esg-card p {
-            line-height: 1.8;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* ==================== OUR STORY VIDEO SECTION ==================== */
         .story-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--light-gray);
         }
 
         .video-container {
             max-width: 1000px;
             margin: 0 auto;
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
@@ -904,8 +912,8 @@
         }
 
         .play-button {
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             background: var(--gradient-gold);
             border-radius: 50%;
             display: flex;
@@ -913,204 +921,177 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
         }
 
         .play-button:hover {
             transform: scale(1.1);
-            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
         }
 
         .play-button i {
             color: var(--royal-blue);
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             margin-left: 5px;
         }
 
         .video-caption {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             color: var(--text-light);
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
         /* ==================== DOCUMENTS SECTION ==================== */
         .documents-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--white);
         }
 
         .documents-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .document-card {
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-top: 5px solid var(--royal-blue);
+            border-top: 4px solid var(--royal-blue);
         }
 
         .document-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 35, 102, 0.15);
             border-top-color: var(--gold);
         }
 
         .doc-icon {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: var(--royal-blue);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .document-card h4 {
             color: var(--royal-blue);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
         }
 
         .document-card p {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        /* Download All Button */
-        .download-all-container {
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .btn-download-all {
-            background: var(--gradient-gold);
-            color: var(--royal-blue);
-            padding: 1.3rem 3.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-download-all:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         /* Google Drive Button */
         .btn-google-drive {
             background: var(--gradient-blue);
             color: var(--white);
-            padding: 1.3rem 3.5rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 15px 50px rgba(0, 35, 102, 0.4);
+            box-shadow: 0 12px 35px rgba(0, 35, 102, 0.4);
             border: none;
             cursor: pointer;
         }
 
         .btn-google-drive:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 60px rgba(0, 35, 102, 0.6);
+            box-shadow: 0 15px 45px rgba(0, 35, 102, 0.6);
         }
 
         /* ==================== CONTACT SECTION ==================== */
         .contact-section {
-            padding: 6rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--white);
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
         }
 
         .contact-info {
             background: var(--light-gray);
-            padding: 3.5rem;
-            border-radius: 25px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
 
         .contact-item {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             display: flex;
             align-items: start;
-            gap: 1.5rem;
+            gap: 1.2rem;
             transition: transform 0.3s ease;
         }
 
         .contact-item:hover {
-            transform: translateX(10px);
+            transform: translateX(8px);
         }
 
         .contact-item i {
             color: var(--gold);
-            font-size: 1.8rem;
-            margin-top: 0.3rem;
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
             filter: drop-shadow(0 2px 10px rgba(255, 215, 0, 0.3));
         }
 
         .contact-item h4 {
             color: var(--royal-blue);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
         }
 
         .contact-item p {
             color: var(--text-light);
             line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .contact-form {
             background: var(--light-gray);
-            padding: 3.5rem;
-            border-radius: 25px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
 
         .form-group {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             color: var(--royal-blue);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1.2rem;
+            padding: 1rem;
             border: 2px solid #e0e0e0;
-            border-radius: 12px;
+            border-radius: 10px;
             font-family: 'Lato', sans-serif;
             transition: all 0.3s ease;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .form-group input:focus,
@@ -1122,29 +1103,29 @@
 
         .form-group textarea {
             resize: vertical;
-            min-height: 140px;
+            min-height: 120px;
         }
 
         /* ==================== FOOTER ==================== */
         .footer {
             background: var(--dark-blue);
             color: var(--white);
-            padding: 4rem 2rem 1.5rem;
+            padding: 3rem 1.5rem 1.5rem;
         }
 
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .footer-section h3 {
             color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .footer-section p,
@@ -1152,9 +1133,10 @@
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             transition: all 0.3s ease;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 0.9rem;
         }
 
         .footer-section a:hover {
@@ -1164,13 +1146,13 @@
 
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
         }
 
         .social-links a {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: var(--royal-blue);
             border-radius: 50%;
             display: flex;
@@ -1184,19 +1166,19 @@
             background: var(--gold);
             color: var(--royal-blue);
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 215, 0, 0.2);
             color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-bottom p {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
+            margin: 0.4rem 0;
+            font-size: 0.85rem;
         }
 
         /* ==================== ANIMATIONS ==================== */
@@ -1216,7 +1198,7 @@
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-20px);
+                transform: translateY(-15px);
             }
         }
 
@@ -1227,22 +1209,22 @@
         /* ==================== SCROLL TO TOP BUTTON ==================== */
         .scroll-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 55px;
-            height: 55px;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
             background: var(--gradient-gold);
             color: var(--royal-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             z-index: 999;
         }
 
@@ -1253,21 +1235,21 @@
 
         .scroll-top:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
         }
 
         /* ==================== RESPONSIVE DESIGN ==================== */
         @media (max-width: 1024px) {
             .nav-container {
-                padding: 0 2rem;
+                padding: 0 1.5rem;
             }
 
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
             .section-title h2 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
         }
 
@@ -1296,20 +1278,20 @@
             }
 
             .hero {
-                padding: 8rem 1.5rem 4rem;
+                padding: 7rem 1.5rem 3rem;
                 min-height: 90vh;
             }
 
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
 
             .hero .tagline {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .hero .subtitle {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .cta-buttons {
@@ -1322,16 +1304,16 @@
             }
 
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             .section-title p {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
             .stats-grid,
@@ -1349,61 +1331,69 @@
             }
 
             .logo {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
 
             .scroll-top {
-                width: 45px;
-                height: 45px;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .download-all-container {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-                align-items: center;
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
             }
 
             .play-button {
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
             }
 
             .play-button i {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .financial-highlight {
                 font-size: 2rem;
             }
 
+            .financial-highlight {
+                font-size: 1.8rem;
+            }
+
             .bet-number {
-                font-size: 3rem;
+                font-size: 2.2rem;
             }
 
             .section-title h2 {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
             }
 
             .play-button {
-                width: 70px;
-                height: 70px;
+                width: 55px;
+                height: 55px;
             }
 
             .play-button i {
-                font-size: 1.8rem;
+                font-size: 1.3rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.6rem 1.2rem;
+            }
+            
+            .btn {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .btn-google-drive {
+                padding: 0.9rem 2rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -1487,13 +1477,13 @@
     </section>
 
     <!-- About Section -->
-    <section style="padding: 6rem 2rem; background: white;">
+    <section style="padding: 4rem 1.5rem; background: white;">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>About AG Mortgage Bank</h2>
                 <p>AG Mortgage Bank Plc was founded in 2004 with the Assemblies of God Nigeria as the core investor (51.9% shareholding). Our objective is to support low and medium income families to own affordable and livable homes through the provision of unique mortgage services. Operating as a CBN-Licensed National Mortgage Bank since January 2005, we have established ourselves as a trusted partner in Nigeria's housing finance sector.</p>
             </div>
-            <div class="financial-grid" style="margin-top: 3rem;">
+            <div class="financial-grid" style="margin-top: 2rem;">
                 <div class="financial-card" data-aos="fade-right" data-aos-delay="100">
                     <h4>Our Mission</h4>
                     <p>To provide accessible and affordable mortgage financing solutions that empower Nigerians to achieve home ownership while maintaining the highest standards of service excellence and ethical business practices.</p>
@@ -1576,7 +1566,7 @@
                         <i class="fas fa-arrow-up"></i>
                         <span>21.4% Growth (2023)</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-light);">2021: ₦19.4B → 2022: ₦18.2B → 2023: ₦22.1B</p>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">2021: ₦19.4B → 2022: ₦18.2B → 2023: ₦22.1B</p>
                 </div>
                 <div class="financial-card" data-aos="flip-left" data-aos-delay="200">
                     <h4>Gross Loan Portfolio</h4>
@@ -1585,7 +1575,7 @@
                         <i class="fas fa-arrow-up"></i>
                         <span>18.5% Growth (2023)</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-light);">69.7% of total assets</p>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">69.7% of total assets</p>
                 </div>
                 <div class="financial-card" data-aos="flip-left" data-aos-delay="300">
                     <h4>Profit Before Tax</h4>
@@ -1594,7 +1584,7 @@
                         <i class="fas fa-arrow-up"></i>
                         <span>85.5% Growth (2023)</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-light);">2021: ₦281M → 2022: ₦379M → 2023: ₦703M</p>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">2021: ₦281M → 2022: ₦379M → 2023: ₦703M</p>
                 </div>
                 <div class="financial-card" data-aos="flip-left" data-aos-delay="400">
                     <h4>Return on Equity (Pre-tax)</h4>
@@ -1603,7 +1593,7 @@
                         <i class="fas fa-arrow-up"></i>
                         <span>Improved from 6.4% (2022)</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-light);">Strong profitability metrics</p>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">Strong profitability metrics</p>
                 </div>
                 <div class="financial-card" data-aos="flip-left" data-aos-delay="500">
                     <h4>Capital Adequacy Ratio</h4>
@@ -1612,7 +1602,7 @@
                         <i class="fas fa-check-circle"></i>
                         <span>Well above 10% minimum</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-light);">Strong capitalisation</p>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">Strong capitalisation</p>
                 </div>
                 <div class="financial-card" data-aos="flip-left" data-aos-delay="600">
                     <h4>Liquidity Ratio</h4>
@@ -1621,10 +1611,10 @@
                         <i class="fas fa-check-circle"></i>
                         <span>Above 20% regulatory minimum</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-light);">Excellent liquidity position</p>
+                    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">Excellent liquidity position</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+            <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
                 <a href="pdf/AG-Mortgage-Bank-Financial-Model.pdf" class="btn-download" download="AG-Mortgage-Bank-Financial-Model.pdf">
                     <i class="fas fa-file-excel"></i> Download Financial Model
                 </a>
@@ -1710,7 +1700,7 @@
                     </ul>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
+            <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
                 <a href="pdf/SCALING UP - AGMB Transformation 2025.pdf" class="btn btn-primary" download="SCALING UP - AGMB Transformation 2025.pdf">
                     <i class="fas fa-download"></i> Download Transformation Plan
                 </a>
@@ -1796,7 +1786,7 @@
                     </ul>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+            <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
                 <a href="pdf/AGMB Products Brochure 2025.pdf" class="btn-download" download="AGMB Products Brochure 2025.pdf">
                     <i class="fas fa-book"></i> Download Products Brochure
                 </a>
@@ -1951,18 +1941,12 @@
                 </div>
             </div>
             
-            <!-- Download All Button and Google Drive Link -->
-            <div class="download-all-container" data-aos="zoom-in">
-                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                    <button class="btn-download-all" onclick="downloadAllDocuments()">
-                        <i class="fas fa-download"></i>
-                        Download All Documents (ZIP)
-                    </button>
-                    <a href="https://drive.google.com/drive/folders/1ypNGt89D_kiyp-RLIMvjNr4N3cJxJxFu" target="_blank" class="btn-google-drive">
-                        <i class="fab fa-google-drive"></i>
-                        View All Documents on Google Drive
-                    </a>
-                </div>
+            <!-- Google Drive Link -->
+            <div style="text-align: center; margin-top: 3rem;" data-aos="zoom-in">
+                <a href="https://drive.google.com/drive/folders/1ypNGt89D_kiyp-RLIMvjNr4N3cJxJxFu" target="_blank" class="btn-google-drive">
+                    <i class="fab fa-google-drive"></i>
+                    View All Documents on Google Drive
+                </a>
             </div>
         </div>
     </section>
@@ -1976,7 +1960,7 @@
             </div>
             <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right">
-                    <h3 style="color: var(--royal-blue); margin-bottom: 2rem;">Contact Information</h3>
+                    <h3 style="color: var(--royal-blue); margin-bottom: 1.5rem;">Contact Information</h3>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
@@ -2007,7 +1991,7 @@
                     </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
-                    <h3 style="color: var(--royal-blue); margin-bottom: 2rem;">Send Us a Message</h3>
+                    <h3 style="color: var(--royal-blue); margin-bottom: 1.5rem;">Send Us a Message</h3>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
@@ -2041,7 +2025,7 @@
             <div class="footer-section">
                 <h3>AG Mortgage Bank Plc</h3>
                 <p>Building Nigeria's Future Through Affordable Housing Finance</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">CBN-Licensed National Mortgage Bank since 2005</p>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">CBN-Licensed National Mortgage Bank since 2005</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -2077,7 +2061,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 AG Mortgage Bank Plc. All rights reserved. | RC: 123456 | CBN License No: XXX/XXX</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Designed for Investor Relations</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Designed for Investor Relations</p>
         </div>
     </footer>
 
@@ -2231,22 +2215,23 @@
             notification.style.cssText = `
                 position: fixed;
                 top: 100px;
-                right: 30px;
+                right: 20px;
                 background: linear-gradient(135deg, #002366 0%, #001a4d 100%);
                 color: white;
-                padding: 1.5rem 2rem;
-                border-radius: 15px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                padding: 1.2rem 1.5rem;
+                border-radius: 12px;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
                 z-index: 10000;
                 animation: slideIn 0.4s ease;
-                border-left: 5px solid #FFD700;
+                border-left: 4px solid #FFD700;
+                max-width: 300px;
             `;
             notification.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-check-circle" style="color: #FFD700; font-size: 1.5rem;"></i>
+                    <i class="fas fa-check-circle" style="color: #FFD700; font-size: 1.3rem;"></i>
                     <div>
                         <strong>Download Started</strong><br>
-                        <span style="font-size: 0.9rem; opacity: 0.9;">${documentName}</span>
+                        <span style="font-size: 0.85rem; opacity: 0.9;">${documentName}</span>
                     </div>
                 </div>
             `;
@@ -2258,75 +2243,6 @@
                 notification.style.animation = 'slideOut 0.4s ease';
                 setTimeout(() => notification.remove(), 400);
             }, 3000);
-        }
-
-        // ==================== DOWNLOAD ALL DOCUMENTS ====================
-        function downloadAllDocuments() {
-            const documents = [
-                'pdf/SCALING UP - AGMB Transformation 2025.pdf',
-                'pdf/AGMB Strategy Plan 2025-2030.pdf',
-                'pdf/AGMB CORPORATE PROFILE 2025.pdf',
-                'pdf/AGMB Products Brochure 2025.pdf',
-                'pdf/AGMB PRODUCT BROCHURE.pdf',
-                'pdf/DIASPORA HOME OWNERSHIP SCHEME.pdf',
-                'pdf/AG-Mortgage-Bank-Financial-Model.pdf',
-                'pdf/AG Mortgage Bank Market Intelligence Report.pdf',
-                'pdf/AGMB - Sustainability Report 2023.pdf'
-            ];
-            
-            // Create a more prominent notification
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: linear-gradient(135deg, #002366 0%, #001a4d 100%);
-                color: white;
-                padding: 3rem;
-                border-radius: 25px;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-                z-index: 10000;
-                text-align: center;
-                animation: zoomIn 0.4s ease;
-                border: 3px solid #FFD700;
-                min-width: 400px;
-            `;
-            notification.innerHTML = `
-                <i class="fas fa-download" style="color: #FFD700; font-size: 3rem; margin-bottom: 1rem;"></i>
-                <h3 style="color: #FFD700; margin-bottom: 1rem;">Preparing Download Package</h3>
-                <p style="margin-bottom: 1.5rem; opacity: 0.9;">Creating ZIP file with ${documents.length} documents...</p>
-                <div style="background: rgba(255,215,0,0.2); height: 8px; border-radius: 10px; overflow: hidden;">
-                    <div id="progressBar" style="background: #FFD700; height: 100%; width: 0%; transition: width 0.3s ease;"></div>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Simulate progress
-            let progress = 0;
-            const progressBar = notification.querySelector('#progressBar');
-            const interval = setInterval(() => {
-                progress += 10;
-                progressBar.style.width = progress + '%';
-                
-                if (progress >= 100) {
-                    clearInterval(interval);
-                    notification.innerHTML = `
-                        <i class="fas fa-check-circle" style="color: #FFD700; font-size: 3rem; margin-bottom: 1rem;"></i>
-                        <h3 style="color: #FFD700; margin-bottom: 0.5rem;">Download Ready!</h3>
-                        <p style="opacity: 0.9;">All ${documents.length} documents packaged</p>
-                        <button onclick="window.location.href='pdf/AG-Mortgage-Bank-Documents.zip'" style="margin-top: 1.5rem; background: #FFD700; color: #002366; border: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; cursor: pointer;">
-                            <i class="fas fa-download"></i> Download ZIP File
-                        </button>
-                    `;
-                    
-                    setTimeout(() => {
-                        notification.style.animation = 'zoomOut 0.4s ease';
-                        setTimeout(() => notification.remove(), 400);
-                    }, 5000);
-                }
-            }, 200);
         }
 
         // ==================== FORM SUBMISSION ====================
@@ -2342,22 +2258,23 @@
             notification.style.cssText = `
                 position: fixed;
                 top: 100px;
-                right: 30px;
+                right: 20px;
                 background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
                 color: white;
-                padding: 1.5rem 2rem;
-                border-radius: 15px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                padding: 1.2rem 1.5rem;
+                border-radius: 12px;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
                 z-index: 10000;
                 animation: slideIn 0.4s ease;
-                border-left: 5px solid #FFD700;
+                border-left: 4px solid #FFD700;
+                max-width: 300px;
             `;
             notification.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-check-circle" style="color: #FFD700; font-size: 1.5rem;"></i>
+                    <i class="fas fa-check-circle" style="color: #FFD700; font-size: 1.3rem;"></i>
                     <div>
                         <strong>Message Sent Successfully!</strong><br>
-                        <span style="font-size: 0.9rem; opacity: 0.9;">We'll contact you shortly</span>
+                        <span style="font-size: 0.85rem; opacity: 0.9;">We'll contact you shortly</span>
                     </div>
                 </div>
             `;
@@ -2379,7 +2296,7 @@
         style.textContent = `
             @keyframes slideIn {
                 from {
-                    transform: translateX(400px);
+                    transform: translateX(300px);
                     opacity: 0;
                 }
                 to {
@@ -2394,29 +2311,7 @@
                     opacity: 1;
                 }
                 to {
-                    transform: translateX(400px);
-                    opacity: 0;
-                }
-            }
-            
-            @keyframes zoomIn {
-                from {
-                    transform: translate(-50%, -50%) scale(0.8);
-                    opacity: 0;
-                }
-                to {
-                    transform: translate(-50%, -50%) scale(1);
-                    opacity: 1;
-                }
-            }
-            
-            @keyframes zoomOut {
-                from {
-                    transform: translate(-50%, -50%) scale(1);
-                    opacity: 1;
-                }
-                to {
-                    transform: translate(-50%, -50%) scale(0.8);
+                    transform: translateX(300px);
                     opacity: 0;
                 }
             }
