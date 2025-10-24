@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight on mobile */
         }
 
         :root {
@@ -36,7 +37,7 @@
 
         html {
             scroll-behavior: smooth;
-            overflow-x: hidden; /* Prevent horizontal scroll on html level */
+            overflow-x: hidden;
             width: 100%;
         }
 
@@ -44,7 +45,7 @@
             font-family: 'Lato', sans-serif;
             color: var(--text-dark);
             line-height: 1.7;
-            overflow-x: hidden; /* Crucial fix for horizontal overflow */
+            overflow-x: hidden;
             background: var(--white);
             -webkit-text-size-adjust: 100%;
             width: 100%;
@@ -296,6 +297,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn::before {
@@ -551,6 +553,7 @@
             position: relative;
             overflow: hidden;
             font-size: 0.9rem;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn-download::before {
@@ -944,6 +947,7 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .play-button:hover {
@@ -1029,6 +1033,7 @@
             box-shadow: 0 12px 35px rgba(0, 35, 102, 0.4);
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn-google-drive:hover {
@@ -1162,6 +1167,7 @@
             transition: all 0.3s ease;
             line-height: 1.5;
             font-size: 0.9rem;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .footer-section a:hover {
@@ -1185,6 +1191,7 @@
             justify-content: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .social-links a:hover {
@@ -1251,6 +1258,7 @@
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             z-index: 999;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .scroll-top.active {
@@ -1742,11 +1750,12 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
+                <!-- Fixed button text - removed "Download" -->
                 <a href="pdf/SCALING UP - AGMB Transformation 2025.pdf" class="btn btn-primary" download="SCALING UP - AGMB Transformation 2025.pdf">
-                    <i class="fas fa-download"></i> Download Transformation Plan
+                    <i class="fas fa-download"></i> Transformation Plan
                 </a>
                 <a href="pdf/AGMB Strategy Plan 2025-2030.pdf" class="btn btn-secondary" download="AGMB Strategy Plan 2025-2030.pdf">
-                    <i class="fas fa-download"></i> Download Strategic Plan
+                    <i class="fas fa-download"></i> Strategic Plan
                 </a>
             </div>
         </div>
