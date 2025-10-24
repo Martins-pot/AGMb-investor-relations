@@ -36,15 +36,19 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden; /* Prevent horizontal scroll on html level */
+            width: 100%;
         }
 
         body {
             font-family: 'Lato', sans-serif;
             color: var(--text-dark);
             line-height: 1.7;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Crucial fix for horizontal overflow */
             background: var(--white);
-            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+            -webkit-text-size-adjust: 100%;
+            width: 100%;
+            position: relative;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -61,6 +65,8 @@
             padding: 1rem 0;
             z-index: 1000;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 0;
+            right: 0;
         }
 
         .navbar.scrolled {
@@ -77,6 +83,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 1.5rem;
+            width: 100%;
         }
 
         .logo {
@@ -159,6 +166,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
         /* Animated background particles */
@@ -218,6 +226,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            width: 100%;
         }
 
         .hero-badge {
@@ -333,11 +342,14 @@
             padding: 4rem 1.5rem;
             background: var(--white);
             position: relative;
+            width: 100%;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
+            padding: 0 1.5rem;
         }
 
         .stats-grid {
@@ -432,6 +444,7 @@
         .ratings-section {
             padding: 4rem 1.5rem;
             background: linear-gradient(to bottom, var(--white) 0%, var(--light-gray) 100%);
+            width: 100%;
         }
 
         .ratings-grid {
@@ -572,6 +585,7 @@
         .financial-section {
             padding: 4rem 1.5rem;
             background: var(--light-gray);
+            width: 100%;
         }
 
         .financial-grid {
@@ -628,6 +642,7 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .vision-section::before {
@@ -718,6 +733,7 @@
         .products-section {
             padding: 4rem 1.5rem;
             background: var(--white);
+            width: 100%;
         }
 
         .products-grid {
@@ -809,6 +825,7 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .esg-section::before {
@@ -878,6 +895,7 @@
         .story-section {
             padding: 4rem 1.5rem;
             background: var(--light-gray);
+            width: 100%;
         }
 
         .video-container {
@@ -887,6 +905,7 @@
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             position: relative;
+            width: 100%;
         }
 
         .video-container video {
@@ -950,6 +969,7 @@
         .documents-section {
             padding: 4rem 1.5rem;
             background: var(--white);
+            width: 100%;
         }
 
         .documents-grid {
@@ -1020,6 +1040,7 @@
         .contact-section {
             padding: 4rem 1.5rem;
             background: var(--white);
+            width: 100%;
         }
 
         .contact-grid {
@@ -1114,6 +1135,7 @@
             background: var(--dark-blue);
             color: var(--white);
             padding: 3rem 1.5rem 1.5rem;
+            width: 100%;
         }
 
         .footer-content {
@@ -1299,10 +1321,12 @@
 
             .cta-buttons {
                 flex-direction: column;
+                align-items: center;
             }
 
             .btn {
                 width: 100%;
+                max-width: 300px;
                 justify-content: center;
             }
 
@@ -1398,6 +1422,20 @@
                 padding: 0.9rem 2rem;
                 font-size: 0.9rem;
             }
+            
+            /* Additional mobile fixes */
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-content,
+            .section-title p {
+                padding: 0 0.5rem;
+            }
+            
+            .cta-buttons {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -1480,7 +1518,7 @@
     </section>
 
     <!-- About Section -->
-    <section style="padding: 4rem 1.5rem; background: white;">
+    <section style="padding: 4rem 1.5rem; background: white; width: 100%;">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>About AG Mortgage Bank</h2>
