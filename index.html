@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AG Mortgage Bank - Premium Investor Portal</title>
-    <meta name="description" content="AG Mortgage Bank - 20+ years of excellence in Nigerian mortgage banking. Bb+ rated with ₦22.1B in assets.">
+    <title>AG Mortgage Bank Plc - Premium Investor Portal</title>
+    <meta name="description" content="AG Mortgage Bank Plc - 20+ years of excellence in Nigerian mortgage banking. Bb+ rated with ₦22.1B in assets.">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight on mobile */
         }
 
         :root {
@@ -36,7 +37,7 @@
 
         html {
             scroll-behavior: smooth;
-            overflow-x: hidden; /* Prevent horizontal scroll on html level */
+            overflow-x: hidden;
             width: 100%;
         }
 
@@ -44,7 +45,7 @@
             font-family: 'Lato', sans-serif;
             color: var(--text-dark);
             line-height: 1.7;
-            overflow-x: hidden; /* Crucial fix for horizontal overflow */
+            overflow-x: hidden;
             background: var(--white);
             -webkit-text-size-adjust: 100%;
             width: 100%;
@@ -296,6 +297,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn::before {
@@ -551,6 +553,7 @@
             position: relative;
             overflow: hidden;
             font-size: 0.9rem;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn-download::before {
@@ -944,6 +947,7 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .play-button:hover {
@@ -1029,6 +1033,7 @@
             box-shadow: 0 12px 35px rgba(0, 35, 102, 0.4);
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn-google-drive:hover {
@@ -1130,6 +1135,46 @@
             min-height: 120px;
         }
 
+        /* ==================== BRANCHES SECTION ==================== */
+        .branches-section {
+            padding: 2rem 1.5rem;
+            background: var(--white);
+            width: 100%;
+        }
+
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .branch-card {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--royal-blue);
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15);
+        }
+
+        .branch-card h4 {
+            color: var(--royal-blue);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .branch-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
         /* ==================== FOOTER ==================== */
         .footer {
             background: var(--dark-blue);
@@ -1162,6 +1207,7 @@
             transition: all 0.3s ease;
             line-height: 1.5;
             font-size: 0.9rem;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .footer-section a:hover {
@@ -1185,6 +1231,7 @@
             justify-content: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .social-links a:hover {
@@ -1251,6 +1298,7 @@
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             z-index: 999;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .scroll-top.active {
@@ -1349,7 +1397,8 @@
             .big-bets-grid,
             .products-grid,
             .esg-grid,
-            .documents-grid {
+            .documents-grid,
+            .branches-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1443,9 +1492,9 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">AG MORTGAGE BANK</a>
+            <a href="#" class="logo">AG MORTGAGE BANK PLC</a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#ratings">Ratings</a></li>
                 <li><a href="#financial">Performance</a></li>
                 <li><a href="#vision">Vision 2030</a></li>
@@ -1469,7 +1518,7 @@
         <div class="floating-element"></div>
         <div class="hero-content">
             <div class="hero-badge">CBN-LICENSED SINCE 2005</div>
-            <h1>AG Mortgage Bank</h1>
+            <h1>AG Mortgage Bank Plc</h1>
             <p class="tagline">Your Trusted Partner in Home Ownership</p>
             <p class="subtitle">Building Nigeria's Future Through Affordable Housing Finance<br>20+ Years of Excellence | Bb+ Rating | ₦22.1B in Assets</p>
             <div class="cta-buttons">
@@ -1490,26 +1539,14 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-number" data-count="22.1">0</div>
-                    <div class="stat-label">Total Assets (₦ Billions)</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-number" data-count="20">0</div>
-                    <div class="stat-label">Years Industry Experience</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-number">Bb+</div>
-                    <div class="stat-label">Agusto & Co. Rating</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="stat-number" data-count="28">0</div>
                     <div class="stat-label">Capital Adequacy Ratio (%)</div>
                 </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="stat-number">Top 10</div>
                     <div class="stat-label">PMB in Nigeria</div>
                 </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-number" data-count="5">0</div>
                     <div class="stat-label">Branch Locations</div>
                 </div>
@@ -1521,7 +1558,7 @@
     <section style="padding: 4rem 1.5rem; background: white; width: 100%;">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>About AG Mortgage Bank</h2>
+                <h2>About AG Mortgage Bank Plc</h2>
                 <p>AG Mortgage Bank Plc was founded in 2004 with the Assemblies of God Nigeria as the core investor (51.9% shareholding). Our objective is to support low and medium income families to own affordable and livable homes through the provision of unique mortgage services. Operating as a CBN-Licensed National Mortgage Bank since January 2005, we have established ourselves as a trusted partner in Nigeria's housing finance sector.</p>
             </div>
             <div class="financial-grid" style="margin-top: 2rem;">
@@ -1550,19 +1587,6 @@
             </div>
             <div class="ratings-grid">
                 <div class="rating-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="rating-badge">Bb+</div>
-                    <h3>Agusto & Co.</h3>
-                    <div class="rating-info">
-                        <span><strong>Rating:</strong> Bb+ (Upgraded from Bb)</span>
-                        <span><strong>Outlook:</strong> Stable</span>
-                        <span><strong>Date:</strong> October 2024</span>
-                    </div>
-                    <p>Agusto & Co. upgraded AGMB's rating to Bb+ with a Stable outlook, reflecting improved funding from stronger partnerships and a solid position in Nigeria's mortgage banking industry after 20+ years.</p>
-                    <a href="https://drive.google.com/drive/folders/1ypNGt89D_kiyp-RLIMvjNr4N3cJxJxFu" target="_blank" class="btn-download">
-                        <i class="fas fa-download"></i> Download Full Report
-                    </a>
-                </div>
-                <div class="rating-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="rating-badge">BB+</div>
                     <h3>Global Credit Rating (GCR)</h3>
                     <div class="rating-info">
@@ -1576,7 +1600,7 @@
                         <i class="fas fa-download"></i> Download Full Report
                     </a>
                 </div>
-                <div class="rating-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="rating-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="rating-badge">BBB</div>
                     <h3>DataPro Rating</h3>
                     <div class="rating-info">
@@ -1742,98 +1766,86 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
-                <a href="pdf/SCALING UP - AGMB Transformation 2025.pdf" class="btn btn-primary" download="SCALING UP - AGMB Transformation 2025.pdf">
-                    <i class="fas fa-download"></i> Download Transformation Plan
+                <!-- Fixed button text - removed "Download" -->
+                <a href="pdf/SCALING UP - AGMB Transformation 2025-2030 Plan.pdf" class="btn btn-primary" download="SCALING UP - AGMB Transformation 2025-2030 Plan.pdf">
+                    <i class="fas fa-download"></i> Transformation Plan
                 </a>
                 <a href="pdf/AGMB Strategy Plan 2025-2030.pdf" class="btn btn-secondary" download="AGMB Strategy Plan 2025-2030.pdf">
-                    <i class="fas fa-download"></i> Download Strategic Plan
+                    <i class="fas fa-download"></i> Strategic Plan
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Products & Services Section -->
-    <section class="products-section" id="products">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Diverse Product Portfolio</h2>
-                <p>Tailored mortgage and financial solutions for every Nigerian homebuyer</p>
+<!-- Products & Services Section -->
+<section class="products-section" id="products">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Diverse Product Portfolio</h2>
+            <p>Tailored banking solutions for individuals, businesses, and investors</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="product-icon">💼</div>
+                <h4>Flexi Account</h4>
+                <p>Flexible current account for seamless daily transactions and money management</p>
+                <ul class="product-features">
+                    <li>₦10,000 minimum initial deposit</li>
+                    <li>Concessional COT rates</li>
+                    <li>Personalized cheque books</li>
+                    <li>VAT exemption</li>
+                    <li>Access to credit facilities</li>
+                    <li>Monthly statements available</li>
+                </ul>
             </div>
-            <div class="products-grid">
-                <div class="product-card featured-product" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="product-icon">🌍</div>
-                    <h4>Diaspora Home Ownership Scheme</h4>
-                    <p><strong>Featured Product:</strong> Specially designed for Nigerians abroad with over 17 million potential customers</p>
-                    <ul class="product-features">
-                        <li>Up to 70% financing (max ₦100M)</li>
-                        <li>Maximum 10-year tenor</li>
-                        <li>Remote property inspections</li>
-                        <li>Fast 30-day turnaround</li>
-                        <li>EDGE certified homes</li>
-                        <li>Digital application process</li>
-                    </ul>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="product-icon">🏠</div>
-                    <h4>Residential/Commercial Mortgages</h4>
-                    <p>Traditional mortgage financing for property acquisition</p>
-                    <ul class="product-features">
-                        <li>Up to 70% of property cost</li>
-                        <li>Maximum ₦100 million</li>
-                        <li>7-year maximum tenor</li>
-                        <li>Competitive interest rates</li>
-                    </ul>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="product-icon">🎯</div>
-                    <h4>LIMO (Leap Into Mortgage)</h4>
-                    <p>Perfect for first-time homebuyers with consistent savings</p>
-                    <ul class="product-features">
-                        <li>Requires 18 months savings</li>
-                        <li>Maximum 10-year tenor</li>
-                        <li>Up to ₦100 million</li>
-                        <li>Fast 30-day processing</li>
-                    </ul>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="product-icon">🔄</div>
-                    <h4>Rent-to-Own</h4>
-                    <p>Transition from tenant to homeowner seamlessly</p>
-                    <ul class="product-features">
-                        <li>Rent payments count toward ownership</li>
-                        <li>Flexible payment structure</li>
-                        <li>Path to home ownership</li>
-                    </ul>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="product-icon">🏗️</div>
-                    <h4>CONFIN (Construction Finance)</h4>
-                    <p>Financing for developers and construction companies</p>
-                    <ul class="product-features">
-                        <li>Support housing supply</li>
-                        <li>Tailored for developers</li>
-                        <li>Flexible terms</li>
-                    </ul>
-                </div>
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="product-icon">💰</div>
-                    <h4>Asset-Backed Investment Note</h4>
-                    <p>Investment opportunities with attractive returns</p>
-                    <ul class="product-features">
-                        <li>Fund size up to ₦5 billion</li>
-                        <li>Average funds: ₦5 million</li>
-                        <li>Interest rate: Up to 20%</li>
-                        <li>12+ months tenor</li>
-                    </ul>
-                </div>
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="product-icon">💰</div>
+                <h4>Regular Savings</h4>
+                <p>Perfect account for accumulating capital and earning interest</p>
+                <ul class="product-features">
+                    <li>Earn interest on savings</li>
+                    <li>Immediate fund access</li>
+                    <li>ATM card available</li>
+                    <li>Safety of contributions assured</li>
+                    <li>Easy capital accumulation</li>
+                    <li>Convenient deposit options</li>
+                </ul>
             </div>
-            <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
-                <a href="pdf/AGMB Products Brochure 2025.pdf" class="btn-download" download="AGMB Products Brochure 2025.pdf">
-                    <i class="fas fa-book"></i> Download Products Brochure
-                </a>
+            <div class="product-card featured-product" data-aos="zoom-in" data-aos-delay="300">
+                <div class="product-icon">🏦</div>
+                <h4>Asset Bin</h4>
+                <p>Top-tier investment product with unbeatable interest rates</p>
+                <ul class="product-features">
+                    <li>5-year tenor renewable annually</li>
+                    <li>Asset-backed investment</li>
+                    <li>Quarterly interest payments</li>
+                    <li>Investment note certificate</li>
+                    <li>Priority return on investment</li>
+                    <li>Wealth creation opportunities</li>
+                </ul>
+            </div>
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="product-icon">🎯</div>
+                <h4>Save-4-It</h4>
+                <p>Pocket-friendly mortgage product for low-income earners</p>
+                <ul class="product-features">
+                    <li>₦5,000 minimum deposit</li>
+                    <li>3% above savings account rate</li>
+                    <li>Quarterly statements</li>
+                    <li>Cheque lodgement allowed</li>
+                    <li>Third-party withdrawals</li>
+                    <li>Ideal for traders, cooperatives</li>
+                </ul>
             </div>
         </div>
-    </section>
+        <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
+            <a href="pdf/AGMB Products Brochure 2025.pdf" class="btn-download" download="AGMB Products Brochure 2025.pdf">
+                <i class="fas fa-book"></i> Download Products Brochure
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- ESG Section -->
     <section class="esg-section">
@@ -1872,7 +1884,7 @@
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>Our Story</h2>
-                <p>Discover the journey of AG Mortgage Bank - 20+ years of empowering Nigerian families through affordable housing finance</p>
+                <p>Discover the journey of AG Mortgage Bank Plc - 20+ years of empowering Nigerian families through affordable housing finance</p>
             </div>
             <div class="video-container" data-aos="zoom-in">
                 <video id="storyVideo" poster="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80">
@@ -1904,9 +1916,9 @@
                 <!-- Corporate & Strategy Documents -->
                 <div class="document-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
-                    <h4>AGMB Transformation 2025</h4>
+                    <h4>AGMB Transformation 2025-2030</h4>
                     <p>SCALING UP: Comprehensive transformation plan for becoming Nigeria's No. 1 Housing Finance Group</p>
-                    <a href="pdf/SCALING UP - AGMB Transformation 2025.pdf" class="btn-download" download="SCALING UP - AGMB Transformation 2025.pdf">
+                    <a href="pdf/SCALING UP - AGMB Transformation 2025-2030 Plan.pdf" class="btn-download" download="SCALING UP - AGMB Transformation 2025-2030 Plan.pdf">
                         <i class="fas fa-download"></i> Download PDF
                     </a>
                 </div>
@@ -1941,14 +1953,6 @@
                     <h4>AGMB Product Brochure</h4>
                     <p>Comprehensive product portfolio and service offerings</p>
                     <a href="pdf/AGMB PRODUCT BROCHURE.pdf" class="btn-download" download="AGMB PRODUCT BROCHURE.pdf">
-                        <i class="fas fa-download"></i> Download PDF
-                    </a>
-                </div>
-                <div class="document-card" data-aos="fade-up" data-aos-delay="350">
-                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
-                    <h4>Diaspora Home Ownership Scheme</h4>
-                    <p>Detailed information for Nigerian diaspora homebuyers with special financing options</p>
-                    <a href="pdf/DIASPORA HOME OWNERSHIP SCHEME.pdf" class="btn-download" download="DIASPORA HOME OWNERSHIP SCHEME.pdf">
                         <i class="fas fa-download"></i> Download PDF
                     </a>
                 </div>
@@ -2023,13 +2027,6 @@
                             <p>info@agmortgagebankplc.com</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-building"></i>
-                        <div>
-                            <h4>Other Locations</h4>
-                            <p>Surulere | Festac | Abuja | Enugu</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
                     <h3 style="color: var(--royal-blue); margin-bottom: 1.5rem;">Send Us a Message</h3>
@@ -2060,6 +2057,43 @@
         </div>
     </section>
 
+    <!-- Branches Section -->
+    <section class="branches-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Branch Locations</h2>
+                <p>Visit us at any of our conveniently located branches across Nigeria</p>
+            </div>
+            <div class="branches-grid">
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Head Office</h4>
+                    <p>96 Opebi Road, Ikeja, Lagos, Nigeria</p>
+                    <p><strong>Phone:</strong> 08155543000</p>
+                </div>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Surulere Branch</h4>
+                    <p>24 Bode Thomas Street, Surulere, Lagos</p>
+                    <p><strong>Phone:</strong> 08155543001</p>
+                </div>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Festac Branch</h4>
+                    <p>Festac Town, 1st Avenue, Lagos</p>
+                    <p><strong>Phone:</strong> 08155543002</p>
+                </div>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Abuja Branch</h4>
+                    <p>Plot 123, Central Business District, Abuja</p>
+                    <p><strong>Phone:</strong> 08155543003</p>
+                </div>
+                <div class="branch-card" data-aos="fade-up" data-aos-delay="500">
+                    <h4>Enugu Branch</h4>
+                    <p>45 Ogui Road, Enugu, Enugu State</p>
+                    <p><strong>Phone:</strong> 08155543004</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -2082,15 +2116,11 @@
                 <a href="#vision">Vision 2030</a>
                 <a href="#products">Products & Services</a>
                 <a href="#story">Our Story</a>
-                <a href="#documents">Documents</a>
+                <a href="#documents">Investor Resources</a>
             </div>
             <div class="footer-section">
                 <h3>Resources</h3>
-                <a href="#documents">Investor Documents</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">FAQs</a>
-                <a href="#">Careers</a>
+                <a href="#documents">Investor Resources</a>
             </div>
             <div class="footer-section">
                 <h3>Certifications</h3>
@@ -2101,7 +2131,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 AG Mortgage Bank Plc. All rights reserved. | RC: 123456 | CBN License No: XXX/XXX</p>
+            <p>&copy; 2024 AG Mortgage Bank Plc. All rights reserved. | RC: 123456 | CBN License No: 000005</p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem;">Designed for Investor Relations</p>
         </div>
     </footer>

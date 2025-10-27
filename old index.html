@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight on mobile */
         }
 
         :root {
@@ -36,6 +37,8 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -44,7 +47,9 @@
             line-height: 1.7;
             overflow-x: hidden;
             background: var(--white);
-            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+            -webkit-text-size-adjust: 100%;
+            width: 100%;
+            position: relative;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -61,6 +66,8 @@
             padding: 1rem 0;
             z-index: 1000;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 0;
+            right: 0;
         }
 
         .navbar.scrolled {
@@ -77,6 +84,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 1.5rem;
+            width: 100%;
         }
 
         .logo {
@@ -159,6 +167,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
         /* Animated background particles */
@@ -218,6 +227,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            width: 100%;
         }
 
         .hero-badge {
@@ -287,6 +297,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn::before {
@@ -333,11 +344,14 @@
             padding: 4rem 1.5rem;
             background: var(--white);
             position: relative;
+            width: 100%;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
+            padding: 0 1.5rem;
         }
 
         .stats-grid {
@@ -432,6 +446,7 @@
         .ratings-section {
             padding: 4rem 1.5rem;
             background: linear-gradient(to bottom, var(--white) 0%, var(--light-gray) 100%);
+            width: 100%;
         }
 
         .ratings-grid {
@@ -538,6 +553,7 @@
             position: relative;
             overflow: hidden;
             font-size: 0.9rem;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn-download::before {
@@ -572,6 +588,7 @@
         .financial-section {
             padding: 4rem 1.5rem;
             background: var(--light-gray);
+            width: 100%;
         }
 
         .financial-grid {
@@ -628,6 +645,7 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .vision-section::before {
@@ -718,6 +736,7 @@
         .products-section {
             padding: 4rem 1.5rem;
             background: var(--white);
+            width: 100%;
         }
 
         .products-grid {
@@ -809,6 +828,7 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .esg-section::before {
@@ -878,6 +898,7 @@
         .story-section {
             padding: 4rem 1.5rem;
             background: var(--light-gray);
+            width: 100%;
         }
 
         .video-container {
@@ -887,6 +908,7 @@
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             position: relative;
+            width: 100%;
         }
 
         .video-container video {
@@ -925,6 +947,7 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .play-button:hover {
@@ -950,6 +973,7 @@
         .documents-section {
             padding: 4rem 1.5rem;
             background: var(--white);
+            width: 100%;
         }
 
         .documents-grid {
@@ -1009,6 +1033,7 @@
             box-shadow: 0 12px 35px rgba(0, 35, 102, 0.4);
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .btn-google-drive:hover {
@@ -1020,6 +1045,7 @@
         .contact-section {
             padding: 4rem 1.5rem;
             background: var(--white);
+            width: 100%;
         }
 
         .contact-grid {
@@ -1114,6 +1140,7 @@
             background: var(--dark-blue);
             color: var(--white);
             padding: 3rem 1.5rem 1.5rem;
+            width: 100%;
         }
 
         .footer-content {
@@ -1140,6 +1167,7 @@
             transition: all 0.3s ease;
             line-height: 1.5;
             font-size: 0.9rem;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .footer-section a:hover {
@@ -1163,6 +1191,7 @@
             justify-content: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .social-links a:hover {
@@ -1229,6 +1258,7 @@
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             z-index: 999;
+            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
         }
 
         .scroll-top.active {
@@ -1299,10 +1329,12 @@
 
             .cta-buttons {
                 flex-direction: column;
+                align-items: center;
             }
 
             .btn {
                 width: 100%;
+                max-width: 300px;
                 justify-content: center;
             }
 
@@ -1398,6 +1430,20 @@
                 padding: 0.9rem 2rem;
                 font-size: 0.9rem;
             }
+            
+            /* Additional mobile fixes */
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-content,
+            .section-title p {
+                padding: 0 0.5rem;
+            }
+            
+            .cta-buttons {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -1480,7 +1526,7 @@
     </section>
 
     <!-- About Section -->
-    <section style="padding: 4rem 1.5rem; background: white;">
+    <section style="padding: 4rem 1.5rem; background: white; width: 100%;">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>About AG Mortgage Bank</h2>
@@ -1704,11 +1750,12 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
+                <!-- Fixed button text - removed "Download" -->
                 <a href="pdf/SCALING UP - AGMB Transformation 2025.pdf" class="btn btn-primary" download="SCALING UP - AGMB Transformation 2025.pdf">
-                    <i class="fas fa-download"></i> Download Transformation Plan
+                    <i class="fas fa-download"></i> Transformation Plan
                 </a>
                 <a href="pdf/AGMB Strategy Plan 2025-2030.pdf" class="btn btn-secondary" download="AGMB Strategy Plan 2025-2030.pdf">
-                    <i class="fas fa-download"></i> Download Strategic Plan
+                    <i class="fas fa-download"></i> Strategic Plan
                 </a>
             </div>
         </div>
@@ -2343,3 +2390,5 @@
     </script>
 </body>
 </html>
+
+<!-- tezt -->
