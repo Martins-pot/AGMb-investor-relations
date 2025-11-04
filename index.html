@@ -18,7 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight on mobile */
+            -webkit-tap-highlight-color: transparent;
         }
 
         :root {
@@ -87,19 +87,15 @@
             width: 100%;
         }
 
-        .logo {
-            color: var(--gold);
-            font-size: 1.3rem;
-            font-weight: 800;
-            text-decoration: none;
-            letter-spacing: 1px;
+        /* = LARGER LOGO STYLING === */
+        .logo-img {
+            height: 65px; 
+            width: auto;
             transition: all 0.3s ease;
-            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
         }
 
-        .logo:hover {
+        .logo-img:hover {
             transform: scale(1.05);
-            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
         }
 
         .nav-menu {
@@ -153,7 +149,7 @@
             border-radius: 2px;
         }
 
-        /* ==================== HERO SECTION ==================== */
+        /* HERO SECTION */
         .hero {
             margin-top: 0;
             min-height: 100vh;
@@ -170,7 +166,7 @@
             width: 100%;
         }
 
-        /* Animated background particles */
+        /* Animated bg particles */
         .hero::before {
             content: '';
             position: absolute;
@@ -297,7 +293,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn::before {
@@ -339,7 +335,7 @@
             box-shadow: 0 12px 35px rgba(255, 215, 0, 0.3);
         }
 
-        /* ==================== STATS SECTION ==================== */
+        /* ===STATS SECTION */
         .stats-section {
             padding: 4rem 1.5rem;
             background: var(--white);
@@ -408,7 +404,7 @@
             font-weight: 500;
         }
 
-        /* ==================== SECTION TITLES ==================== */
+        /* ========== SECTION TITLES ==== */
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
@@ -442,7 +438,7 @@
             line-height: 1.6;
         }
 
-        /* ==================== RATINGS SECTION ==================== */
+        /* ==== RATINGS SECTION ======= */
         .ratings-section {
             padding: 4rem 1.5rem;
             background: linear-gradient(to bottom, var(--white) 0%, var(--light-gray) 100%);
@@ -536,7 +532,7 @@
             font-size: 0.95rem;
         }
 
-        /* ==================== DOWNLOAD BUTTONS ==================== */
+        /*=== DOWNLOAD BUTTONS ======= */
         .btn-download {
             background: var(--gradient-blue);
             color: var(--white);
@@ -553,7 +549,7 @@
             position: relative;
             overflow: hidden;
             font-size: 0.9rem;
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-download::before {
@@ -584,7 +580,7 @@
             z-index: 1;
         }
 
-        /* ==================== FINANCIAL SECTION ==================== */
+        /* === FINANCIAL SECTION === */
         .financial-section {
             padding: 4rem 1.5rem;
             background: var(--light-gray);
@@ -638,7 +634,7 @@
             font-size: 0.9rem;
         }
 
-        /* ==================== VISION SECTION ==================== */
+        /*  VISION SECTION ==== */
         .vision-section {
             padding: 4rem 1.5rem;
             background: var(--gradient-blue);
@@ -732,7 +728,7 @@
             font-size: 1rem;
         }
 
-        /* ==================== PRODUCTS SECTION ==================== */
+        /* == PRODUCTS SECTION ==== */
         .products-section {
             padding: 4rem 1.5rem;
             background: var(--white);
@@ -821,7 +817,7 @@
             letter-spacing: 1px;
         }
 
-        /* ==================== ESG SECTION ==================== */
+        /*== ESG SECTION ==== */
         .esg-section {
             padding: 4rem 1.5rem;
             background: linear-gradient(135deg, var(--forest-green) 0%, #1a6b1a 100%);
@@ -894,7 +890,7 @@
             font-size: 0.95rem;
         }
 
-        /* ==================== OUR STORY VIDEO SECTION ==================== */
+        /* = OUR STORY VIDEO SECTION == */
         .story-section {
             padding: 4rem 1.5rem;
             background: var(--light-gray);
@@ -947,7 +943,7 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .play-button:hover {
@@ -969,7 +965,7 @@
             line-height: 1.6;
         }
 
-        /* ==================== DOCUMENTS SECTION ==================== */
+        /* == DOCUMENTS SECTION == */
         .documents-section {
             padding: 4rem 1.5rem;
             background: var(--white);
@@ -1033,7 +1029,7 @@
             box-shadow: 0 12px 35px rgba(0, 35, 102, 0.4);
             border: none;
             cursor: pointer;
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-google-drive:hover {
@@ -1041,7 +1037,7 @@
             box-shadow: 0 15px 45px rgba(0, 35, 102, 0.6);
         }
 
-        /* ==================== CONTACT SECTION ==================== */
+        /* == CONTACT SECTION === */
         .contact-section {
             padding: 4rem 1.5rem;
             background: var(--white);
@@ -1135,7 +1131,7 @@
             min-height: 120px;
         }
 
-        /* ==================== BRANCHES SECTION ==================== */
+        /* === BRANCHES SECTION === */
         .branches-section {
             padding: 2rem 1.5rem;
             background: var(--white);
@@ -1175,7 +1171,7 @@
             line-height: 1.5;
         }
 
-        /* ==================== FOOTER ==================== */
+        /* === FOOTER ====== */
         .footer {
             background: var(--dark-blue);
             color: var(--white);
@@ -1207,7 +1203,7 @@
             transition: all 0.3s ease;
             line-height: 1.5;
             font-size: 0.9rem;
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .footer-section a:hover {
@@ -1231,7 +1227,7 @@
             justify-content: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .social-links a:hover {
@@ -1253,7 +1249,7 @@
             font-size: 0.85rem;
         }
 
-        /* ==================== ANIMATIONS ==================== */
+        /* ==== ANIMATIONS ===== */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1278,7 +1274,7 @@
             animation: float 3s ease-in-out infinite;
         }
 
-        /* ==================== SCROLL TO TOP BUTTON ==================== */
+        /* === SCROLL TO TOP BUTTON ===== */
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -1298,7 +1294,7 @@
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
             z-index: 999;
-            -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .scroll-top.active {
@@ -1311,7 +1307,7 @@
             box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
         }
 
-        /* ==================== RESPONSIVE DESIGN ==================== */
+        /*==== RESPONSIVE DESIGN ====== */
         @media (max-width: 1024px) {
             .nav-container {
                 padding: 0 1.5rem;
@@ -1406,9 +1402,8 @@
                 padding: 0 1.5rem;
             }
 
-            .logo {
-                font-size: 1.2rem;
-            }
+            .logo-img {
+                height: 50px; 
 
             .scroll-top {
                 width: 40px;
@@ -1472,7 +1467,11 @@
                 font-size: 0.9rem;
             }
             
-            /* Additional mobile fixes */
+            .logo-img {
+                height: 45px;
+            }
+            
+           
             .container {
                 padding: 0 1rem;
             }
@@ -1492,7 +1491,9 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">AG MORTGAGE BANK PLC</a>
+            <a href="#" class="logo">
+                <img src="images/20_yrs_anniversary_logo.jpg" alt="AG Mortgage Bank Plc" class="logo-img">
+            </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#ratings">Ratings</a></li>
@@ -1534,8 +1535,8 @@
         </div>
     </section>
 
-    <!-- Quick Stats Section -->
-    <!-- <section class="stats-section" id="about">
+    <!-- Quick Stats Section
+    <section class="stats-section" id="about">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
@@ -1766,7 +1767,6 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" data-aos="fade-up">
-                <!-- Fixed button text - removed "Download" -->
                 <a href="pdf/SCALING UP - AGMB Transformation 2025-2030 Plan.pdf" class="btn btn-primary" download="SCALING UP - AGMB Transformation 2025-2030 Plan.pdf">
                     <i class="fas fa-download"></i> Transformation Plan
                 </a>
@@ -1778,74 +1778,73 @@
     </section>
 
     <!-- Products & Services Section -->
-<!-- Products & Services Section -->
-<section class="products-section" id="products">
-    <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Diverse Product Portfolio</h2>
-            <p>Tailored banking solutions for individuals, businesses, and investors</p>
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Diverse Product Portfolio</h2>
+                <p>Tailored banking solutions for individuals, businesses, and investors</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-icon">💼</div>
+                    <h4>Flexi Account</h4>
+                    <p>Flexible current account for seamless daily transactions and money management</p>
+                    <ul class="product-features">
+                        <li>₦10,000 minimum initial deposit</li>
+                        <li>Concessional COT rates</li>
+                        <li>Personalized cheque books</li>
+                        <li>VAT exemption</li>
+                        <li>Access to credit facilities</li>
+                        <li>Monthly statements available</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-icon">💰</div>
+                    <h4>Regular Savings</h4>
+                    <p>Perfect account for accumulating capital and earning interest</p>
+                    <ul class="product-features">
+                        <li>Earn interest on savings</li>
+                        <li>Immediate fund access</li>
+                        <li>ATM card available</li>
+                        <li>Safety of contributions assured</li>
+                        <li>Easy capital accumulation</li>
+                        <li>Convenient deposit options</li>
+                    </ul>
+                </div>
+                <div class="product-card featured-product" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-icon">🏦</div>
+                    <h4>Asset Bin</h4>
+                    <p>Top-tier investment product with unbeatable interest rates</p>
+                    <ul class="product-features">
+                        <li>5-year tenor renewable annually</li>
+                        <li>Asset-backed investment</li>
+                        <li>Quarterly interest payments</li>
+                        <li>Investment note certificate</li>
+                        <li>Priority return on investment</li>
+                        <li>Wealth creation opportunities</li>
+                    </ul>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="product-icon">🎯</div>
+                    <h4>Save-4-It</h4>
+                    <p>Pocket-friendly mortgage product for low-income earners</p>
+                    <ul class="product-features">
+                        <li>₦5,000 minimum deposit</li>
+                        <li>3% above savings account rate</li>
+                        <li>Quarterly statements</li>
+                        <li>Cheque lodgement allowed</li>
+                        <li>Third-party withdrawals</li>
+                        <li>Ideal for traders, cooperatives</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
+                <a href="pdf/AGMB Products Brochure 2025.pdf" class="btn-download" download="AGMB Products Brochure 2025.pdf">
+                    <i class="fas fa-book"></i> Download Products Brochure
+                </a>
+            </div>
         </div>
-        <div class="products-grid">
-            <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="product-icon">💼</div>
-                <h4>Flexi Account</h4>
-                <p>Flexible current account for seamless daily transactions and money management</p>
-                <ul class="product-features">
-                    <li>₦10,000 minimum initial deposit</li>
-                    <li>Concessional COT rates</li>
-                    <li>Personalized cheque books</li>
-                    <li>VAT exemption</li>
-                    <li>Access to credit facilities</li>
-                    <li>Monthly statements available</li>
-                </ul>
-            </div>
-            <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="product-icon">💰</div>
-                <h4>Regular Savings</h4>
-                <p>Perfect account for accumulating capital and earning interest</p>
-                <ul class="product-features">
-                    <li>Earn interest on savings</li>
-                    <li>Immediate fund access</li>
-                    <li>ATM card available</li>
-                    <li>Safety of contributions assured</li>
-                    <li>Easy capital accumulation</li>
-                    <li>Convenient deposit options</li>
-                </ul>
-            </div>
-            <div class="product-card featured-product" data-aos="zoom-in" data-aos-delay="300">
-                <div class="product-icon">🏦</div>
-                <h4>Asset Bin</h4>
-                <p>Top-tier investment product with unbeatable interest rates</p>
-                <ul class="product-features">
-                    <li>5-year tenor renewable annually</li>
-                    <li>Asset-backed investment</li>
-                    <li>Quarterly interest payments</li>
-                    <li>Investment note certificate</li>
-                    <li>Priority return on investment</li>
-                    <li>Wealth creation opportunities</li>
-                </ul>
-            </div>
-            <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
-                <div class="product-icon">🎯</div>
-                <h4>Save-4-It</h4>
-                <p>Pocket-friendly mortgage product for low-income earners</p>
-                <ul class="product-features">
-                    <li>₦5,000 minimum deposit</li>
-                    <li>3% above savings account rate</li>
-                    <li>Quarterly statements</li>
-                    <li>Cheque lodgement allowed</li>
-                    <li>Third-party withdrawals</li>
-                    <li>Ideal for traders, cooperatives</li>
-                </ul>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
-            <a href="pdf/AGMB Products Brochure 2025.pdf" class="btn-download" download="AGMB Products Brochure 2025.pdf">
-                <i class="fas fa-book"></i> Download Products Brochure
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ESG Section -->
     <section class="esg-section">
@@ -2098,7 +2097,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>AG Mortgage Bank Plc</h3>
+                <img src="images/20_yrs_anniversary_logo.jpg" alt="AG Mortgage Bank Plc" style="height: 50px; margin-bottom: 1rem;">
                 <p>Building Nigeria's Future Through Affordable Housing Finance</p>
                 <p style="margin-top: 1rem; font-size: 0.85rem;">CBN-Licensed National Mortgage Bank since 2005</p>
                 <div class="social-links">
@@ -2141,11 +2140,10 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- AOS Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
     <script>
-        // ==================== INITIALIZE AOS ANIMATIONS ====================
+
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
@@ -2153,7 +2151,7 @@
             offset: 100
         });
 
-        // ==================== MOBILE NAVIGATION TOGGLE ====================
+
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
 
@@ -2184,7 +2182,7 @@
             });
         });
 
-        // ==================== NAVBAR SCROLL EFFECT ====================
+     
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             const scrollTop = document.getElementById('scrollTop');
@@ -2198,7 +2196,7 @@
             }
         });
 
-        // ==================== SMOOTH SCROLL ====================
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -2213,7 +2211,7 @@
             });
         });
 
-        // ==================== SCROLL TO TOP BUTTON ====================
+
         document.getElementById('scrollTop').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -2221,7 +2219,7 @@
             });
         });
 
-        // ==================== ANIMATED COUNTERS ====================
+  
         const animateCounter = (element, target) => {
             let current = 0;
             const increment = target / 50;
@@ -2236,7 +2234,7 @@
             }, 30);
         };
 
-        // Trigger counters when stats section is visible
+
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2255,7 +2253,6 @@
             statsObserver.observe(statsSection);
         }
 
-        // ==================== VIDEO PLAYER FUNCTIONALITY ====================
         const video = document.getElementById('storyVideo');
         const videoOverlay = document.getElementById('videoOverlay');
         const playButton = document.getElementById('playButton');
@@ -2279,9 +2276,8 @@
             videoOverlay.classList.remove('hidden');
         });
 
-        // ==================== DOWNLOAD HANDLER ====================
+ 
         function handleDownload(documentName) {
-            // Create a temporary notification
             const notification = document.createElement('div');
             notification.style.cssText = `
                 position: fixed;
@@ -2309,14 +2305,13 @@
             
             document.body.appendChild(notification);
             
-            // Remove notification after 3 seconds
+
             setTimeout(() => {
                 notification.style.animation = 'slideOut 0.4s ease';
                 setTimeout(() => notification.remove(), 400);
             }, 3000);
         }
 
-        // ==================== FORM SUBMISSION ====================
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             
@@ -2324,7 +2319,7 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             
-            // Create success notification
+
             const notification = document.createElement('div');
             notification.style.cssText = `
                 position: fixed;
@@ -2355,14 +2350,13 @@
             // Reset form
             e.target.reset();
             
-            // Remove notification after 4 seconds
+       
             setTimeout(() => {
                 notification.style.animation = 'slideOut 0.4s ease';
                 setTimeout(() => notification.remove(), 400);
             }, 4000);
         });
 
-        // ==================== ADD CSS ANIMATIONS ====================
         const style = document.createElement('style');
         style.textContent = `
             @keyframes slideIn {
@@ -2389,7 +2383,7 @@
         `;
         document.head.appendChild(style);
 
-        // ==================== LAZY LOADING OPTIMIZATION ====================
+
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
